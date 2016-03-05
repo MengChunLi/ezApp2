@@ -13,7 +13,7 @@ import applicationActions from '../actions/application'
 // import gameActions from '../actions/game'
 // import playerActions from '../actions/player'
 // import teamActions from '../actions/team'
-
+import TabBottom from './TabBottom'
 import Home from './Home'
 import Shop from './Shop'
 //import Team from './Team'
@@ -21,33 +21,36 @@ import Shop from './Shop'
 export default class App extends Component {
 
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       tab: null
     }
   }
 
-  componentWillReceiveProps (props) {
-    const {application} = props
+  componentWillMount () {
+    const {application} = this.props;
     this.setState({
       tab: application.tab
     })
   }
 
   render () {
-    const {tab} = this.state
+
+    const {tab} = this.state;
+
+    console.log(tab);
    // const {home, shop} = this.props
 
     return (
-      <View style={styles.container}>
-      <Home />
-        {tab === 'home' &&
-          <Home />
-        }
-        {tab === 'shop' &&
-          <Shop  />
-        }
-      </View>
+      <TabBottom />
+      // <View style={styles.container}>
+      //   {tab === 'home' &&
+      //     <Home />
+      //   }
+      //   {tab === 'shop' &&
+      //     <Shop  />
+      //   }
+      // </View>
     )
   }
 }

@@ -10,11 +10,11 @@ import React, {
   Image
 } from 'react-native'
 
-export default class ShopList extends Component {
+export default class MemberIndex extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-        <Text>門市</Text>
+        <Text>會員</Text>
       </View>
 		)
 	}
