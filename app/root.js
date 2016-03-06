@@ -23,7 +23,8 @@ export default class Root extends Component {
 
   componentDidMount () {
     if (Platform.OS === 'ios') {
-      StatusBarIOS.setHidden(true)
+      // StatusBarIOS.setStyle('default');
+      // StatusBarIOS.setHidden(true)
     }
   }
 

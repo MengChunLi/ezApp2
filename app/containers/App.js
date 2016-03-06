@@ -14,43 +14,21 @@ import applicationActions from '../actions/application'
 // import playerActions from '../actions/player'
 // import teamActions from '../actions/team'
 import TabBottom from './TabBottom'
-import Home from './Home'
-import Shop from './Shop'
+
 //import Team from './Team'
 
 export default class App extends Component {
 
   constructor (props) {
     super(props);
-    this.state = {
-      tab: null
-    }
-  }
-
-  componentWillMount () {
-    const {application} = this.props;
-    this.setState({
-      tab: application.tab
-    })
   }
 
   render () {
 
-    const {tab} = this.state;
-
-    console.log(tab);
-   // const {home, shop} = this.props
+    const {home, shop, actions} = this.props
 
     return (
-      <TabBottom />
-      // <View style={styles.container}>
-      //   {tab === 'home' &&
-      //     <Home />
-      //   }
-      //   {tab === 'shop' &&
-      //     <Shop  />
-      //   }
-      // </View>
+      <TabBottom actions={actions}/>
     )
   }
 }
@@ -63,8 +41,8 @@ const styles = StyleSheet.create({
 
 App.propTypes = {
   home: PropTypes.object,
-  shop: PropTypes.object
-  // team: PropTypes.object,
+  shop: PropTypes.object,
+  actions: PropTypes.object
   // gameActions: PropTypes.object,
   // playerActions: PropTypes.object,
   // teamActions: PropTypes.object

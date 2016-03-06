@@ -13,6 +13,9 @@ export default class TabBottom extends Component {
   }
 
   render() {
+
+    const {actions} = this.props;
+
     return (
       <TabNavigator>
         <TabNavigator.Item
@@ -23,7 +26,7 @@ export default class TabBottom extends Component {
           titleStyle={styles.tabBarItemText}
           selectedTitleStyle={styles.tabBarItemActiveText}
           onPress={() => this.setState({ selectedTab: 'home' })}>
-          {<Home />}
+          {<Home actions={actions}/>}
         </TabNavigator.Item>
         <TabNavigator.Item
           selected={this.state.selectedTab === 'shop'}
@@ -33,7 +36,7 @@ export default class TabBottom extends Component {
           titleStyle={styles.tabBarItemText}
           selectedTitleStyle={styles.tabBarItemActiveText}
           onPress={() => this.setState({ selectedTab: 'shop' })}>
-          {<Shop />}
+          {<Shop  actions={actions}/>}
         </TabNavigator.Item>
         <TabNavigator.Item
           selected={this.state.selectedTab === 'phone'}
@@ -43,7 +46,7 @@ export default class TabBottom extends Component {
           titleStyle={styles.tabBarItemText}
           selectedTitleStyle={styles.tabBarItemActiveText}
           onPress={() => this.setState({ selectedTab: 'phone' })}>
-          {<Phone />}
+          {<Phone actions={actions}/>}
         </TabNavigator.Item>
         <TabNavigator.Item
           selected={this.state.selectedTab === 'member'}
@@ -53,7 +56,7 @@ export default class TabBottom extends Component {
           titleStyle={styles.tabBarItemText}
           selectedTitleStyle={styles.tabBarItemActiveText}
           onPress={() => this.setState({ selectedTab: 'member' })}>
-          {<Member />}
+          {<Member actions={actions} />}
         </TabNavigator.Item>
       </TabNavigator>
     );
@@ -70,6 +73,5 @@ const styles = StyleSheet.create({
 });
 
 TabBottom.propTypes = {
-  actions: PropTypes.object,
-  tab: PropTypes.string
+  actions: PropTypes.object
 }

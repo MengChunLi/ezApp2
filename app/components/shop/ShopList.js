@@ -22,6 +22,7 @@ export default class ShopList extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative'
+    flex: 1,
+    paddingTop: 20
   }
 })

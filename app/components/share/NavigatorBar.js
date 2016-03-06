@@ -32,9 +32,7 @@ export default class NavigatorBar extends Component {
 
   render () {
     return (
-      <View>
-        <Text></Text>
-      </View>
+      <View/>
     )
   }
 }
@@ -42,4 +40,3 @@ export default class NavigatorBar extends Component {
 NavigatorBar.propTypes = {
   navState: PropTypes.object
 }
-

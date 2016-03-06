@@ -8,6 +8,7 @@
   "dependencies": {
     "react-native": "^0.21.0",
     "react-native-pure-icon": "0.0.1",
+    "react-native-simple-router": "^0.8.4",
     "react-native-tab-navigator": "^0.2.16",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
